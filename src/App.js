@@ -1,20 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 import styled from 'styled-components';
 import Sidebar from './components/Sidebar';
+import MainContent from './components/MainContent';
 
 function App() {
   return (
     <div className="App">
       <MainContainer>
         <Sidebar />
+        <MainContent />
       </MainContainer>
     </div>
   );
 }
 
 const MainContainer = styled.div`
-
+  display: flex;
+  padding: 4px 8px;
 `;
 export default App;
 
