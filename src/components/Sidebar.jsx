@@ -21,7 +21,7 @@ function Sidebar() {
                 </NavbarLink>
                 <NavbarLink>
                     <Icons>
-                        <Icon src={require("../assets/images/component 114.svg").default} />
+                        <Icon src={require("../assets/images/food-site.svg").default} />
                     </Icons>
                     <Text>Sheduler</Text>
                 </NavbarLink>
@@ -33,13 +33,13 @@ function Sidebar() {
                 </NavbarLink>
                 <NavbarLink>
                     <Icons>
-                        <Icon src={require("../assets/images/component 116.svg").default} />
+                        <Icon src={require("../assets/images/component 114.svg").default} />
                     </Icons>
                     <Text>Rewards</Text>
                 </NavbarLink>
                 <NavbarLink>
                     <Icons> 
-                    <Icon src={require("../assets/images/component 117.svg").default} />
+                    <Icon src={require("../assets/images/component 116.svg").default} />
                     </Icons>
                     <Text>Notes</Text>
                 </NavbarLink>
@@ -78,10 +78,13 @@ const Top = styled.div`
     padding: 20px 0px 60px 80px;
 `;
 const Logo = styled.h1`
-    width: 60%;
+    width: 30%;
+    margin-left: 25px;
     margin-bottom: 40px;
 `;
 const LogoImage = styled.img`
+    display: block;
+    width: 100%;
 `;
 const MenuItems = styled.div`
 `;
@@ -109,7 +112,7 @@ const Bottom = styled.div`
 const Premium = styled.div`
     padding:30px;
     box-shadow: -2px 4px 5px #9E9696;
-    width: 67%;
+    width: 85%;
 `;
 const ImageContainer = styled.div`
     width: 130px;
@@ -121,22 +124,23 @@ const Image = styled.img`
 `;
 const Bluecard = styled.div`
     background-color: #1C40FA;
-    width: 120px;
-    height: 24px;
+    padding: 12px 15px;
     border-radius: 5px;
     color: #fff;
-    margin: auto;
+    width: 60%;
+    margin: 0 auto 15px;
 `;
 const Whitecard = styled.div`
     background-color: #F8FAFB;
-    width: 120px;
-    height: 24px;
+    padding: 12px 15px;
     border-radius: 5px;
     color: #1C40FA;
+    width: 60%;
     margin: 0 auto;
 `;
 const Sub = styled.h5`
     font-size: 12px;
+    text-align: center;
 `;
 
 export default Sidebar 

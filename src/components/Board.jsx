@@ -23,7 +23,7 @@ const datas = [
         id:2,
         title: 'Mechanics in Physics',
         description: 'This part of chemistry deals with atomic structure and molecular structure.',
-        image: '../assets/images/rectangle 20693',
+        image: '../assets/images/rectangle 20693.jpg',
         icon: '../assets/images/woman (3).png',
         name: 'By Prof Kennai',
         period: '8.30,13th March 2020'
@@ -46,25 +46,25 @@ const datas = [
         {datas.map((item) => (
             <Card>
                 <Item>
-                    <Image src={Item.image} />
+                    <Image src={item.image} alt="item.title" />
                 </Item>
-                <Text>{Item.title}</Text>
-                <Description>{Item.description}</Description>
+                <Text>{item.title}</Text>
+                <Description>{item.description}</Description>
                 <Box>
-                    <Profile><Girl src={Item.icon} /></Profile>
+                    <Profile><Girl src={item.icon} /></Profile>
                     <Content>
-                        <Name>{Item.name}</Name>
-                        <Period>{Item.period}</Period>
+                        <Name>{item.name}</Name>
+                        <Period>{item.period}</Period>
                     </Content>
                 </Box>
             </Card>
-        ))};
+        ))}
     </Container>
   ) 
 }
 
 const Container = styled.div`
-    background-color: green;
+    
 `;
 const Card = styled.div`
 

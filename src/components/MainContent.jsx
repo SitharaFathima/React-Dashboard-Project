@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Header from './Header';
 import Board from './Board';
+import Managar from './Managar';
+
+
 function MainContent() {
   return (
     <>
@@ -11,7 +14,9 @@ function MainContent() {
             <SectionOne><Board /></SectionOne>
             {/* <SectionTwo>2</SectionTwo>
             <SectionThree>3</SectionThree> */}
-            <SectionFour>4</SectionFour>
+            <SectionFour>
+               <Managar />
+            </SectionFour>
             <SectionFive>5</SectionFive>
         </Lessons>
     </Container> 
@@ -25,7 +30,7 @@ const Container = styled.div`
 const Lessons = styled.div`
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-auto-rows: 4fr;
     grid-gap: 10px;
 `;
 const SectionOne = styled.div`
