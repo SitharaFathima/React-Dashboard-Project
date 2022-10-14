@@ -9,6 +9,8 @@ import { FaAngleRight } from 'react-icons/fa';
 
 function Board() {
 
+
+
 const settings = {
     dots: true,
     infinite: false,
@@ -16,9 +18,6 @@ const settings = {
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
- 
-
-    
     responsive: [
         {
         breakpoint: 1024,
@@ -154,7 +153,7 @@ return (
             <Cards>
             <Card>
                 <Item>
-                    
+
                     <Image src={item.image} alt="item.title" />
                 </Item>
                 <Containeres>
@@ -195,15 +194,13 @@ const One = styled.span`
     display: inline-block;
     color: gray;
     font-size: 30px;
-    
 `;
 const Cards = styled.div`
 
 `;
 const Card = styled.div`
-width: 90%;
-    
-    box-shadow: -1px 3px 7px -1px #9e9696;
+    width: 90%; 
+    box-shadow: -1px 0px 4px -2px #9e9696;
 `;
 const Item = styled.div`
     width: 100%; 

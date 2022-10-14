@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Logocomp from "../assets/images/logo-comp.png";
 import Rectangle from "../assets/images/rectangle 20.jpg";
-
+import {Link,  NavLink } from 'react-router-dom';
 
 
 function Sidebar() {
@@ -43,7 +43,7 @@ function Sidebar() {
                     </Icons>
                     <Text>Notes</Text>
                 </NavbarLink>
-                <NavbarLink className="nav-link active" to="">
+                <NavbarLink>
                     <Icons>
                         <Icon src={require("../assets/images/component 118.svg").default} />
                     </Icons>
@@ -56,12 +56,8 @@ function Sidebar() {
                 <ImageContainer>
                     <Image src={Rectangle} />
                 </ImageContainer>   
-                <Bluecard>
-                    <Sub>Buy Premium</Sub>
-                </Bluecard>
-                <Whitecard>
-                    <Sub>Learn more</Sub>
-                </Whitecard>
+                <Bluecard>Buy Premium</Bluecard>
+                <Whitecard>Learn more</Whitecard>
             </Premium>
         </Bottom>  
     </Container>
@@ -92,6 +88,9 @@ const NavbarLink = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 45px;
+    &:hover {      
+        color: #000;
+    }
  `;
 const Icons = styled.div`
     margin-right: 25px;
@@ -122,25 +121,28 @@ const Image = styled.img`
     width: 100%;
     display: inline-block;
 `;
-const Bluecard = styled.div`
+const Bluecard = styled.button`
     background-color: #1C40FA;
     padding: 12px 15px;
     border-radius: 5px;
     color: #fff;
+    display: block;
     width: 60%;
     margin: 0 auto 15px;
+    font-size: 12px;
+    cursor: pointer;
 `;
-const Whitecard = styled.div`
+const Whitecard = styled.button`
     background-color: #F8FAFB;
     padding: 12px 15px;
     border-radius: 5px;
     color: #1C40FA;
     width: 60%;
     margin: 0 auto;
-`;
-const Sub = styled.h5`
+    display: block;
     font-size: 12px;
-    text-align: center;
+    cursor: pointer;
 `;
+
 
 export default Sidebar 

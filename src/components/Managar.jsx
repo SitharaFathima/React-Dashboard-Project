@@ -24,7 +24,7 @@ function Managar() {
                         <Final>Final assessment I Due 14th March 2020</Final>
                     </Left>
                     <Right>
-                        <Resume><Yellow>Resume</Yellow></Resume>
+                        <Yellow>Resume</Yellow>
                     </Right>
                 </Main>
                 <Main>
@@ -33,7 +33,7 @@ function Managar() {
                         <Final>Class test I Due tomorrow</Final> 
                     </Left>
                     <Right>
-                        <Resumee><Violet>Start</Violet></Resumee>
+                        <Violet>Start</Violet>
                     </Right>
                 </Main>
             </Card>    
@@ -117,27 +117,24 @@ const Final = styled.p`
      color: #9E9696;
      font-size: 12px;
 `;
-const Resume = styled.div`
-    width: 100px;
-    border-radius: 5px;
-    padding: 12px 20px;
-    border: 2px solid yellow;
-`;
-const Yellow = styled.h4`
+const Yellow = styled.button`
     font-size: 12px;
     color: yellow;
     text-align: center;
-    
-`;
-const Resumee = styled.div`
-    width: 100px;
-    border-radius: 5px;
+    cursor: pointer;
     padding: 12px 20px;
-    border: 2px solid #5CFB;
+    border-radius: 5px;
+    border: 2px solid yellow;
+    width: 100px;
 `;
-const Violet = styled.h4`
+const Violet = styled.button`
     font-size: 12px;
     color: #5CFB;
+    border-radius: 5px;
     text-align: center;
+    cursor: pointer;
+    padding: 12px 20px;
+    border: 2px solid #5CFB;
+    width: 100px;
 `;
 export default Managar

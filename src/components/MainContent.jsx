@@ -13,10 +13,10 @@ function MainContent() {
         <Header />
         <Lessons>
             <SectionOne><Board /></SectionOne>
-            <SectionFour>
+            <Sectiontwo>
                <Managar />
-            </SectionFour>
-            <SectionFive><Live /></SectionFive>
+            </Sectiontwo>
+            <Sectionthree><Live /></Sectionthree>
         </Lessons>
     </Container> 
     </>
@@ -30,7 +30,7 @@ const Lessons = styled.div`
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: 1fr;
-    grid-gap: 35px;
+    grid-gap: 40px;
     margin-left: 20px;
 `;
 const SectionOne = styled.div`
@@ -38,11 +38,11 @@ const SectionOne = styled.div`
     grid-column-end: 3;
 
 `;
-const SectionFour = styled.div`
+const Sectiontwo = styled.div`
     grid-column-start: 1;
     grid-column-end: 2;
 
-`;const SectionFive = styled.div`
+`;const Sectionthree = styled.div`
     grid-column-start: 2;
     grid-column-end: 3;
 

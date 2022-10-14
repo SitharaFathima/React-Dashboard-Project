@@ -9,7 +9,10 @@ function Header() {
     <Head>
         <Items>
             <Item>
-                <AiOutlineBell />
+                <Box>
+                    <Round><Two>2</Two></Round>
+                    <AiOutlineBell />
+                </Box> 
             </Item>
             <Item>
                 <AiOutlineSetting />
@@ -33,6 +36,23 @@ const Items = styled.ul`
 const Item = styled.li`
     margin-right: 10px;
     width: 25px;
+`;
+const Round = styled.div`
+   width: 8px;
+   height: 8px;
+   background-color: #1C40FA;
+   border-radius: 50px;
+   margin: 0 auto;
+   position: absolute;
+   top:-1px;
+   right: 8px;
+`;
+const Box = styled.div`
+   position: relative;
+`;
+const Two = styled.h6`
+   font-size: 8px;
+   text-align: center;
 `;
 const Profile = styled.img`
     width: 100%;

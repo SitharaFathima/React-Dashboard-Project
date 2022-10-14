@@ -120,23 +120,24 @@ const Bluebox = styled.div`
     align-items: center;
     margin-bottom: 20px;
 `;
-const Right = styled.div`
+const Right = styled.button`
     width: 30px;
     height: 30px;
     background-color: #1C40FA;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 `;
-const Arrow = styled.div`
+const Arrow = styled.span`
     width: 20px;
     margin: auto;
+    display: inline-block;
 `;
 const Image = styled.img`
     width: 100%;
     display: block;
     margin-top: 4px;
 `;
-const Left = styled.div`
+const Left = styled.button`
     width: 65px;
     height: 30px;
     padding: 8px 20px;
@@ -166,16 +167,18 @@ const Tick = styled.img`
     width: 100%;
     display: block;
 `;
-const Medium = styled.div`
-    padding: 3px 15px;
+const Medium = styled.button`
+    padding: 5px 15px;
     background-color: #D9D9D9;
     border-radius: 3px;
     font-size: 10px;
+    width: 70px;
 `;
-const Hard = styled.div`
-    padding: 3px 15px;
+const Hard = styled.button`
+    padding: 5px 15px;
     border-radius: 3px;
     font-size: 10px;
+    width: 70px;
     background-color:#9E9596;
     text-align: center;
 `;
