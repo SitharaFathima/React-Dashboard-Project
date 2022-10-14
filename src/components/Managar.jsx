@@ -33,7 +33,7 @@ function Managar() {
                         <Final>Class test I Due tomorrow</Final> 
                     </Left>
                     <Right>
-                        <Resume><Violet>Start</Violet></Resume>
+                        <Resumee><Violet>Start</Violet></Resumee>
                     </Right>
                 </Main>
             </Card>    
@@ -50,13 +50,13 @@ const Top = styled.div`
 `;
 const Text = styled.h2`
     color: #000;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 25px;
 `;
 const List = styled.ul`
    display: flex;
-   margin-bottom: 40px;
+   margin-bottom: 54px;
 `;
 const Item = styled.li`
     margin-right: 40px;
@@ -71,10 +71,13 @@ const Line = styled.h4`
     }
 `;
 const Card = styled.div`
-
+    padding: 70px 40px 5px;
+    box-shadow: -1px 3px 7px -1px #9e9696;
 `;
 const Main = styled.div`
-
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
 `;
 const Left = styled.div`
 
@@ -83,30 +86,58 @@ const Right = styled.div`
 
 `;
 const Box = styled.div`
-
+    display: flex;
 `;
 const Basic = styled.h3`
-
+    font-size: 12px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+    font-family: 600;
+    margin-right: 35px;
 `;
 const Filler = styled.div`
-
+    display:flex;
 `;
 const Blue = styled.div`
-
+    width: 60px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 10px;
+    background-color: #1C40FA;
 `;
 const Gray = styled.div`
-
+    width: 60px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 10px;
+    background-color: #9e9696;
 `;
 const Final = styled.p`
-
+     color: #9E9696;
+     font-size: 12px;
 `;
 const Resume = styled.div`
-
+    width: 100px;
+    border-radius: 5px;
+    padding: 12px 20px;
+    border: 2px solid yellow;
 `;
 const Yellow = styled.h4`
-
+    font-size: 12px;
+    color: yellow;
+    text-align: center;
+    
+`;
+const Resumee = styled.div`
+    width: 100px;
+    border-radius: 5px;
+    padding: 12px 20px;
+    border: 2px solid #5CFB;
 `;
 const Violet = styled.h4`
-
+    font-size: 12px;
+    color: #5CFB;
+    text-align: center;
 `;
 export default Managar

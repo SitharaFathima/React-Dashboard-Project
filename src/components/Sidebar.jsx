@@ -10,7 +10,7 @@ function Sidebar() {
     <Container>
         <Top>
             <Logo>
-            <   LogoImage src={Logocomp} />
+                <LogoImage src={Logocomp} />
             </Logo>
             <MenuItems>
                 <NavbarLink>
@@ -39,7 +39,7 @@ function Sidebar() {
                 </NavbarLink>
                 <NavbarLink>
                     <Icons> 
-                    <Icon src={require("../assets/images/component 116.svg").default} />
+                    <Icon src={require("../assets/images/component 115.svg").default} />
                     </Icons>
                     <Text>Notes</Text>
                 </NavbarLink>
@@ -80,7 +80,7 @@ const Top = styled.div`
 const Logo = styled.h1`
     width: 30%;
     margin-left: 25px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 `;
 const LogoImage = styled.img`
     display: block;
@@ -91,7 +91,7 @@ const MenuItems = styled.div`
 const NavbarLink = styled.div`
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
  `;
 const Icons = styled.div`
     margin-right: 25px;
@@ -110,7 +110,7 @@ const Bottom = styled.div`
    justify-content: end; 
 `;
 const Premium = styled.div`
-    padding:30px;
+    padding:22px;
     box-shadow: -2px 4px 5px #9E9696;
     width: 85%;
 `;

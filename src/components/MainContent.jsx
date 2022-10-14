@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from './Header';
 import Board from './Board';
 import Managar from './Managar';
+import Live from './Live';
 
 
 function MainContent() {
@@ -12,12 +13,10 @@ function MainContent() {
         <Header />
         <Lessons>
             <SectionOne><Board /></SectionOne>
-            {/* <SectionTwo>2</SectionTwo>
-            <SectionThree>3</SectionThree> */}
             <SectionFour>
                <Managar />
             </SectionFour>
-            <SectionFive>5</SectionFive>
+            <SectionFive><Live /></SectionFive>
         </Lessons>
     </Container> 
     </>
@@ -25,32 +24,27 @@ function MainContent() {
 }
 const Container = styled.div`
     width: 80%;
-    padding: 20px 30px;
+    padding: 20px 30px 20px 30px;
 `;
 const Lessons = styled.div`
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-auto-rows: 4fr;
-    grid-gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 35px;
+    margin-left: 20px;
 `;
 const SectionOne = styled.div`
-    grid-column-start: 1;
-    grid-column-end: 5;
-
-`;
-// const SectionTwo = styled.div`
-
-// `;
-// const SectionThree = styled.div`
-
-// `;
-const SectionFour = styled.div`
-    grid-column-start: 1;
+   grid-column-start: 1;
     grid-column-end: 3;
 
+`;
+const SectionFour = styled.div`
+    grid-column-start: 1;
+    grid-column-end: 2;
+
 `;const SectionFive = styled.div`
-    grid-column-start: 3;
-    grid-column-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 3;
 
 `;
 export default MainContent
