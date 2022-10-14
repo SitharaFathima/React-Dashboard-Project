@@ -13,37 +13,37 @@ function Sidebar() {
                 <LogoImage src={Logocomp} />
             </Logo>
             <MenuItems>
-                <NavbarLink>
+                <NavbarLink to="/">
                     <Icons>
                         <Icon src={require("../assets/images/component 114.svg").default} />
                     </Icons>
                     <Text>Home</Text>
                 </NavbarLink>
-                <NavbarLink>
+                <NavbarLink to="/sheduler">
                     <Icons>
                         <Icon src={require("../assets/images/food-site.svg").default} />
                     </Icons>
                     <Text>Sheduler</Text>
                 </NavbarLink>
-                <NavbarLink>
+                <NavbarLink to="/technology">
                     <Icons>
                         <Icon src={require("../assets/images/component 115.svg").default} />
                     </Icons>
                     <Text>Technology</Text>
                 </NavbarLink>
-                <NavbarLink>
+                <NavbarLink to="/rewards">
                     <Icons>
                         <Icon src={require("../assets/images/component 114.svg").default} />
                     </Icons>
                     <Text>Rewards</Text>
                 </NavbarLink>
-                <NavbarLink>
+                <NavbarLink to="/notes">
                     <Icons> 
                     <Icon src={require("../assets/images/component 115.svg").default} />
                     </Icons>
                     <Text>Notes</Text>
                 </NavbarLink>
-                <NavbarLink>
+                <NavbarLink to="/submission">
                     <Icons>
                         <Icon src={require("../assets/images/component 118.svg").default} />
                     </Icons>
@@ -84,7 +84,7 @@ const LogoImage = styled.img`
 `;
 const MenuItems = styled.div`
 `;
-const NavbarLink = styled.div`
+const NavbarLink = styled(NavLink)`
     display: flex;
     align-items: center;
     margin-bottom: 45px;
