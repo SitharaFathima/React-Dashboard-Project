@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Managar() {
@@ -7,9 +8,9 @@ function Managar() {
         <Top>
             <Text>Assignment Manager</Text>
             <List>
-                <Item><Line>pending</Line></Item>
-                <Item><Line>completed</Line></Item>
-                <Item><Line>submitted</Line></Item>
+                <Item><Line exact to="/" activeClassName="active-link">pending</Line></Item>
+                <Item><Line exact to="/" activeClassName="active-link">completed</Line></Item>
+                <Item><Line exact to="/" activeClassName="active-link">submitted</Line></Item>
             </List>
             <Card>
                 <Main>
@@ -61,17 +62,16 @@ const List = styled.ul`
 const Item = styled.li`
     margin-right: 40px;
 `;
-const Line = styled.h4`
+const Line = styled(NavLink)`
     color: #9E9696;
     font-size: 12px;
-        &:hover {
-            width: 56px;
+        &:hover {   
             color: #000;
             border-bottom: 3px solid #1C40FA;
-    }
+        }
 `;
 const Card = styled.div`
-    padding: 70px 40px 5px;
+    padding: 70px 40px 20px;
     box-shadow: -1px 3px 7px -1px #9e9696;
 `;
 const Main = styled.div`

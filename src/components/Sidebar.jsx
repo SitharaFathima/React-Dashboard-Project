@@ -1,4 +1,5 @@
 import React from 'react';
+import {useState} from 'react';
 import styled from 'styled-components';
 import Logocomp from "../assets/images/logo-comp.png";
 import Rectangle from "../assets/images/rectangle 20.jpg";
@@ -6,50 +7,60 @@ import {Link,  NavLink } from 'react-router-dom';
 
 
 function Sidebar() {
+    const Bar = [
+        {
+            title: "Home",
+            icon: require('../assets/images/component 114.svg').default,
+            link: "/"
+        },
+        {
+            title: "Sheduler",
+            icon: require('../assets/images/food-site.svg').default,
+            link: "/sheduler"
+        },
+        {
+            title: "Technology",
+            icon: require('../assets/images/component 115.svg').default,
+            link: "/technology"
+        },
+        {
+            title: "Rewards",
+            icon: require('../assets/images/component 114.svg').default,
+            link: "/rewards"
+        },
+        {
+            title: "Notes",
+            icon: require('../assets/images/component 115.svg').default,
+            link: "/notes"
+        },
+        {
+            title: "Submission",
+            icon: require('../assets/images/component 118.svg').default,
+            link: "/submission"
+        },
+    ]
   return (
     <Container>
         <Top>
             <Logo>
                 <LogoImage src={Logocomp} />
             </Logo>
-            <MenuItems>
-                <NavbarLink to="/">
-                    <Icons>
-                        <Icon src={require("../assets/images/component 114.svg").default} />
-                    </Icons>
-                    <Text>Home</Text>
-                </NavbarLink>
-                <NavbarLink to="/sheduler">
-                    <Icons>
-                        <Icon src={require("../assets/images/food-site.svg").default} />
-                    </Icons>
-                    <Text>Sheduler</Text>
-                </NavbarLink>
-                <NavbarLink to="/technology">
-                    <Icons>
-                        <Icon src={require("../assets/images/component 115.svg").default} />
-                    </Icons>
-                    <Text>Technology</Text>
-                </NavbarLink>
-                <NavbarLink to="/rewards">
-                    <Icons>
-                        <Icon src={require("../assets/images/component 114.svg").default} />
-                    </Icons>
-                    <Text>Rewards</Text>
-                </NavbarLink>
-                <NavbarLink to="/notes">
-                    <Icons> 
-                    <Icon src={require("../assets/images/component 115.svg").default} />
-                    </Icons>
-                    <Text>Notes</Text>
-                </NavbarLink>
-                <NavbarLink to="/submission">
-                    <Icons>
-                        <Icon src={require("../assets/images/component 118.svg").default} />
-                    </Icons>
-                    <Text>Submission</Text>
-                </NavbarLink>
-            </MenuItems>
+            <Div>
+                <MenuItems>
+                {Bar.map((val, key) => {
+                    return(
+                        <NavbarLink key={key} className="row" onClick={() => {
+                            window.location.pathname = val.link;
+                        }} >
+                            <Icons>
+                                <Icon id="icon" src={val.icon} />
+                            </Icons>
+                            <Text id="title">{val.title}</Text>
+                        </NavbarLink>
+                    )})}
+
+                </MenuItems>
+            </Div>
         </Top>       
         <Bottom>
             <Premium>
@@ -82,9 +93,11 @@ const LogoImage = styled.img`
     display: block;
     width: 100%;
 `;
-const MenuItems = styled.div`
+const Div = styled.div`
 `;
-const NavbarLink = styled(NavLink)`
+const MenuItems = styled.ul`
+`;
+const NavbarLink = styled.li`
     display: flex;
     align-items: center;
     margin-bottom: 45px;
@@ -99,6 +112,7 @@ const Icons = styled.div`
 const Icon = styled.img`
     width: 100%;
     display: block;
+
 `;
 const Text = styled.h3`
     font-size: 14px;
@@ -144,5 +158,8 @@ const Whitecard = styled.button`
     cursor: pointer;
 `;
 
-
 export default Sidebar 
+
+// .input {
+//     background-color: palegreen;
+//   }

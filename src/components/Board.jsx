@@ -48,7 +48,7 @@ const settings = {
 const datas = [
     {
         id:1,
-        title: 'Basic Chemistry 111',
+        title: 'Basic Chemistry III',
         description: 'This part of chemistry deals with atomic structure and molecular structure.',
         image: require('../assets/images/rectangle 4.jpg'),
         icon: require('../assets/images/woman (4) 1.png'),
@@ -78,7 +78,7 @@ const datas = [
     },
     {
         id:1,
-        title: 'Basic Chemistry 111',
+        title: 'Basic Chemistry III',
         description: 'This part of chemistry deals with atomic structure and molecular structure.',
         image: require('../assets/images/rectangle 4.jpg'),
         icon: require('../assets/images/woman (4) 1.png'),
@@ -97,7 +97,7 @@ const datas = [
     },
     {
         id:1,
-        title: 'Basic Chemistry 111',
+        title: 'Basic Chemistry III',
         description: 'This part of chemistry deals with atomic structure and molecular structure.',
         image: require('../assets/images/rectangle 4.jpg'),
         icon: require('../assets/images/woman (4) 1.png'),
@@ -106,7 +106,7 @@ const datas = [
     },
     {
         id:1,
-        title: 'Basic Chemistry 111',
+        title: 'Basic Chemistry III',
         description: 'This part of chemistry deals with atomic structure and molecular structure.',
         image: require('../assets/images/rectangle 4.jpg'),
         icon: require('../assets/images/woman (4) 1.png'),
@@ -124,7 +124,7 @@ const datas = [
     },
     {
         id:1,
-        title: 'Basic Chemistry 111',
+        title: 'Basic Chemistry III',
         description: 'This part of chemistry deals with atomic structure and molecular structure.',
         image: require('../assets/images/rectangle 4.jpg'),
         icon: require('../assets/images/woman (4) 1.png'),

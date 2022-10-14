@@ -1,5 +1,4 @@
 import './App.css';
-
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled from 'styled-components';
@@ -40,7 +39,7 @@ function App() {
 
 const MainContainer = styled.div`
   display: flex;
-  padding: 4px 8px;
+  padding: 4px 8px 50px;
 `;
 export default App;
 
