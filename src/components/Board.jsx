@@ -8,9 +8,7 @@ import { FaAngleRight } from 'react-icons/fa';
 
 
 function Board() {
-
-
-
+    
 const settings = {
     dots: true,
     infinite: false,
@@ -153,7 +151,6 @@ return (
             <Cards>
             <Card>
                 <Item>
-
                     <Image src={item.image} alt="item.title" />
                 </Item>
                 <Containeres>
@@ -182,10 +179,16 @@ const Topbox = styled.div`
     margin: 35px 30px 30px 0;
     display: flex;
     justify-content: space-between;
+    @media all and (max-width: 640px){
+        margin: 35px 8px 30px 0;
+    }
 `;
 const New = styled.h2`
     font-size: 20px;
     color: #000;
+    @media all and (max-width: 640px){
+        font-size: 16px;
+    }
 `;
 const Arrowimg = styled.div`
 
@@ -194,6 +197,9 @@ const One = styled.span`
     display: inline-block;
     color: gray;
     font-size: 30px;
+    @media all and (max-width: 3600px){
+        font-size: 20px;
+    }
 `;
 const Cards = styled.div`
 
@@ -201,6 +207,12 @@ const Cards = styled.div`
 const Card = styled.div`
     width: 90%; 
     box-shadow: -1px 0px 4px -2px #9e9696;
+    @media all and (max-width: 768px){
+        width: 95%;
+    }
+    @media all and (max-width: 640px){
+        margin-bottom: 30px;
+    }
 `;
 const Item = styled.div`
     width: 100%; 
@@ -211,17 +223,38 @@ const Image = styled.img`
 `;
 const Containeres = styled.div`
     padding: 30px 10px;
+    @media all and (max-width: 768px){
+        padding: 30px 5px;
+    }
+    @media all and (max-width: 640px){
+        padding: 30px 10px;
+    }
 `;
 const Text = styled.h3`
     font-size: 14px;
     margin-bottom: 10px;
     font-weight: bolder;
+    @media all and (max-width: 980px){
+        font-size: 12px;
+    }
+    @media all and (max-width: 768px){
+        font-size: 10px;
+    }
+    @media all and (max-width: 640px){
+        font-size: 14px;
+    }
 `;
 const Description = styled.p`
     font-size: 12px;
     margin-bottom: 20px;
     color: #9e9696;
     font-weight: bolder;
+    @media all and (max-width: 768px){
+        font-size: 10px;
+    }
+    @media all and (max-width: 640px){
+        font-size: 12px;
+    }
 `;
 const Box = styled.div`
     display: flex;
@@ -240,11 +273,25 @@ const Content= styled.div`
 `;
 const Name = styled.h3`
     font-size: 12px;
+    @media all and (max-width: 980px){
+        font-size: 10px;
+    }
+    @media all and (max-width: 640px){
+        font-size: 12px;
+    }
 `;
 const Period = styled.p`
     font-size: 12px;
     color: #9e9696;
     font-weight: 600;
+    @media all and (max-width: 980px){
+        font-size: 8px;
+        font-weight: 400;
+    }
+    @media all and (max-width: 640px){
+        font-size: 12px;
+    }
+    
 `;
 
 export default Board

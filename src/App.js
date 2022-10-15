@@ -38,7 +38,7 @@ function App() {
 
 const MainContainer = styled.div`
   display: flex;
-  padding: 4px 8px 50px;
+  padding: 4px 8px 20px;
 `;
 export default App;
 

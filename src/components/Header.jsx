@@ -31,6 +31,7 @@ const Head = styled.header`
 const Items = styled.ul`
     list-style: none;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
 `;
 const Item = styled.li`

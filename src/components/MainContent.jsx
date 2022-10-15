@@ -25,6 +25,16 @@ function MainContent() {
 const Container = styled.div`
     width: 80%;
     padding: 20px 30px 20px 30px;
+    @media all and (max-width: 1280px){
+        padding: 20px 10px 20px 5px;
+    }
+    @media all and (max-width: 980px){
+        width: 75%;
+        padding: 20px 10px 20px 5px;
+    }
+    @media all and (max-width: 640px){
+        width: 100%;
+    }
 `;
 const Lessons = styled.div`
     display: grid;
@@ -32,37 +42,34 @@ const Lessons = styled.div`
     grid-template-rows: 1fr;
     grid-gap: 40px;
     margin-left: 20px;
+    @media all and (max-width: 980px){
+        grid-gap: 25px;
+    }
+   
 `;
 const SectionOne = styled.div`
-   grid-column-start: 1;
+    grid-column-start: 1;
     grid-column-end: 3;
-
+   
 `;
 const Sectiontwo = styled.div`
     grid-column-start: 1;
     grid-column-end: 2;
+    @media all and (max-width: 980px){
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 
 `;const Sectionthree = styled.div`
     grid-column-start: 2;
     grid-column-end: 3;
-
+    @media all and (max-width: 980px){
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 `;
 export default MainContent
 
 
 
 
-{/* <Top>
-<Heading>New Lessons Board</Heading>
-<Arrow><Left /></Arrow>
-<Arrow><Right /></Arrow>
-</Top>
-<Board>
-<Chemistry>
-    <Card>
-        <Buret />
-    </Card>
-    <Text>Basic Chemistry 1111</Text>
-    <Paragraph></Paragraph>
-</Chemistry>
-</Board> */}

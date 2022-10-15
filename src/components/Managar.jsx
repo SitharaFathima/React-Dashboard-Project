@@ -4,15 +4,15 @@ import {Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Managar() {
-    const [ active, setActive] = useState("home");
+
   return (
     <Manager>
         <Top>
             <Text>Assignment Manager</Text>
             <List>
-                <Item><Line className={active == "home" && "active" } onClick={()=> {setActive("home")}}>pending</Line></Item>
-                <Item><Line className={active == "home" && "active" } onClick={()=> {setActive("home")}}>completed</Line></Item>
-                <Item><Line className={active == "home" && "active" } onClick={()=> {setActive("home")}}>submitted</Line></Item>
+                <Item><Line>pending</Line></Item>
+                <Item><Line>completed</Line></Item>
+                <Item><Line>submitted</Line></Item>
             </List>
             <Card>
                 <Main>
@@ -67,14 +67,20 @@ const Item = styled.li`
 const Line = styled(NavLink)`
     color: #9E9696;
     font-size: 12px;
-    &:active{
-        color: #000;
-        border-bottom: 3px solid #1C40FA;
-    }
+   
 `;
 const Card = styled.div`
     padding: 70px 40px 20px;
     box-shadow: -1px 3px 7px -1px #9e9696;
+    @media all and (max-width: 1280px){
+        padding: 70px 15px 20px;
+    }
+    @media all and (max-width: 980px){
+        padding: 30px 40px 20px;
+    }
+    @media all and (max-width: 640px){
+        padding: 30px 20px 20px;
+    }
 `;
 const Main = styled.div`
     display: flex;
@@ -97,9 +103,21 @@ const Basic = styled.h3`
     margin-bottom: 15px;
     font-family: 600;
     margin-right: 35px;
+    @media all and (max-width: 1080px){
+        margin-right: 16px;
+    }
+    @media all and (max-width: 980px){
+        margin-right: 60px;
+    }
+    @media all and (max-width: 760px){
+        margin-right: 30px;
+    }
 `;
 const Filler = styled.div`
     display:flex;
+    @media all and (max-width: 640px){
+        display: none;
+    }
 `;
 const Blue = styled.div`
     width: 60px;
@@ -107,6 +125,15 @@ const Blue = styled.div`
     border-bottom-left-radius: 5px;
     height: 10px;
     background-color: #1C40FA;
+    @media all and (max-width: 1280px){
+        width: 50px;
+    }
+    @media all and (max-width: 980px){
+        width: 70px;
+    }
+    @media all and (max-width: 768px){
+        width: 50px;
+    }
 `;
 const Gray = styled.div`
     width: 60px;
@@ -114,6 +141,15 @@ const Gray = styled.div`
     border-bottom-right-radius: 5px;
     height: 10px;
     background-color: #9e9696;
+    @media all and (max-width: 1280px){
+        width: 50px;
+    }
+    @media all and (max-width: 980px){
+        width: 70px;
+    }
+    @media all and (max-width: 768px){
+        width: 50px;
+    } 
 `;
 const Final = styled.p`
      color: #9E9696;
@@ -128,6 +164,10 @@ const Yellow = styled.button`
     border-radius: 5px;
     border: 2px solid yellow;
     width: 100px;
+    @media all and (max-width: 640px){
+        width: 70px;
+        padding: 8px 14px;
+    }
 `;
 const Violet = styled.button`
     font-size: 12px;
@@ -138,5 +178,9 @@ const Violet = styled.button`
     padding: 12px 20px;
     border: 2px solid #5CFB;
     width: 100px;
+    @media all and (max-width: 640px){
+        width: 70px;
+        padding: 8px 14px;
+    }
 `;
 export default Managar

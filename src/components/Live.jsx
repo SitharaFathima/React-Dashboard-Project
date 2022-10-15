@@ -85,6 +85,18 @@ const Lecture = styled.h3`
 `;
 const Force = styled.div`
     padding: 22px 40px 0px;
+    @media all and (max-width: 1280px){
+        padding: 22px 20px 0px;
+    }
+    @media all and (max-width: 1080px){
+        padding: 22px 10px 0px;
+    }
+    @media all and (max-width: 980px){
+        padding: 22px 40px 0px;
+    }
+    @media all and (max-width: 480px){
+        padding: 22px 10px 0px;
+    }
 `;
 const Momentum = styled.div`
     display: flex;
@@ -97,6 +109,9 @@ const Paragraph = styled.div`
 const Para = styled.p`
     font-size: 14px;
     color: #000;
+    @media all and (max-width: 480px){
+        font-size: 12px;
+    }
 `;
 const Text = styled.h4`
     font-size: 14px;
@@ -106,7 +121,6 @@ const Text = styled.h4`
 const Time = styled.span`
     color: #9e9696;
     font-size: 12px;
-
 `;
 const Physics = styled.h4`
     font-size: 12px;
@@ -126,6 +140,10 @@ const Right = styled.button`
     background-color: #1C40FA;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    @media all and (max-width: 3600px){
+        width: 25px;
+        height: 30px;
+    }
 `;
 const Arrow = styled.span`
     width: 20px;
@@ -144,6 +162,10 @@ const Left = styled.button`
     background-color: #516BFE;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    @media all and (max-width: 3600px){
+        width: 55px;
+        height: 30px;
+    }
 `;
 const Bottom = styled.div`
     display: flex;
@@ -157,11 +179,20 @@ const Mass = styled.div`
 const Item = styled.h5`
     font-size: 12px;
     margin-bottom: 25px;
+    @media all and (max-width: 480px){
+        font-size: 11px;
+    }
+    @media all and (max-width: 360px){
+        font-size: 10px;
+    }
 `;
 const Round = styled.span`
     display: inline-block;
     width: 13px;
     margin-right: 15px;
+    @media all and (max-width: 480px){
+        margin-right: 5px;
+    }
 `;
 const Tick = styled.img`
     width: 100%;
@@ -173,6 +204,11 @@ const Medium = styled.button`
     border-radius: 3px;
     font-size: 10px;
     width: 70px;
+    @media all and (max-width: 360px){
+        padding: 5px 10px;
+        width: 45px;
+        font-size: 8px;
+    }
 `;
 const Hard = styled.button`
     padding: 5px 15px;
@@ -181,6 +217,11 @@ const Hard = styled.button`
     width: 70px;
     background-color:#9E9596;
     text-align: center;
+    @media all and (max-width: 360px){
+        padding: 5px 10px;
+        width: 45px;
+        font-size: 8px;
+    }
 `;
 
 export default Live
