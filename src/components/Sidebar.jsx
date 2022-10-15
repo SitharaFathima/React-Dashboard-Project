@@ -7,6 +7,7 @@ import {Link,  NavLink } from 'react-router-dom';
 
 
 function Sidebar() {
+    const [ active, setActive] = useState("home");
     const Bar = [
         {
             title: "Home",
@@ -49,13 +50,16 @@ function Sidebar() {
                 <MenuItems>
                 {Bar.map((val, key) => {
                     return(
-                        <NavbarLink key={key} className="row" onClick={() => {
-                            window.location.pathname = val.link;
-                        }} >
+                        <NavbarLink
+                            to={val.link}
+                            key={key}
+                            className={active == "home" && "active" } onClick={()=> {setActive("home")}}
+                            >
                             <Icons>
                                 <Icon id="icon" src={val.icon} />
                             </Icons>
                             <Text id="title">{val.title}</Text>
+                            
                         </NavbarLink>
                     )})}
 
@@ -97,26 +101,32 @@ const Div = styled.div`
 `;
 const MenuItems = styled.ul`
 `;
-const NavbarLink = styled.li`
+const NavbarLink = styled(NavLink)`
     display: flex;
     align-items: center;
     margin-bottom: 45px;
-    &:hover {      
+    cursor: pointer;
+    color: #9E9696;;
+    &:active{
         color: #000;
     }
  `;
-const Icons = styled.div`
+const Icons = styled.button`
     margin-right: 25px;
+    display: inline-block;
     width: 20px;
+    cursor: pointer;
 `;
 const Icon = styled.img`
     width: 100%;
     display: block;
-
+    &:active{
+        color: #000;
+    }
 `;
 const Text = styled.h3`
     font-size: 14px;
-    color: #9E9696;
+   
 `;
 const Bottom = styled.div`
    display: flex;
@@ -159,7 +169,3 @@ const Whitecard = styled.button`
 `;
 
 export default Sidebar 
-
-// .input {
-//     background-color: palegreen;
-//   }

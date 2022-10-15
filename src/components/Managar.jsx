@@ -1,16 +1,18 @@
 import React from 'react';
+import { useState } from 'react';
 import {Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Managar() {
+    const [ active, setActive] = useState("home");
   return (
     <Manager>
         <Top>
             <Text>Assignment Manager</Text>
             <List>
-                <Item><Line exact to="/" activeClassName="active-link">pending</Line></Item>
-                <Item><Line exact to="/" activeClassName="active-link">completed</Line></Item>
-                <Item><Line exact to="/" activeClassName="active-link">submitted</Line></Item>
+                <Item><Line className={active == "home" && "active" } onClick={()=> {setActive("home")}}>pending</Line></Item>
+                <Item><Line className={active == "home" && "active" } onClick={()=> {setActive("home")}}>completed</Line></Item>
+                <Item><Line className={active == "home" && "active" } onClick={()=> {setActive("home")}}>submitted</Line></Item>
             </List>
             <Card>
                 <Main>
@@ -65,10 +67,10 @@ const Item = styled.li`
 const Line = styled(NavLink)`
     color: #9E9696;
     font-size: 12px;
-        &:hover {   
-            color: #000;
-            border-bottom: 3px solid #1C40FA;
-        }
+    &:active{
+        color: #000;
+        border-bottom: 3px solid #1C40FA;
+    }
 `;
 const Card = styled.div`
     padding: 70px 40px 20px;
