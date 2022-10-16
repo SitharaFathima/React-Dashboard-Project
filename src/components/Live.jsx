@@ -140,7 +140,7 @@ const Right = styled.button`
     background-color: #1C40FA;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    @media all and (max-width: 3600px){
+    @media all and (max-width: 360px){
         width: 25px;
         height: 30px;
     }
@@ -162,7 +162,7 @@ const Left = styled.button`
     background-color: #516BFE;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    @media all and (max-width: 3600px){
+    @media all and (max-width: 360px){
         width: 55px;
         height: 30px;
     }

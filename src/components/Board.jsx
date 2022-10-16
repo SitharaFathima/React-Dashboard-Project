@@ -179,15 +179,12 @@ const Topbox = styled.div`
     margin: 35px 30px 30px 0;
     display: flex;
     justify-content: space-between;
-    @media all and (max-width: 640px){
-        margin: 35px 8px 30px 0;
-    }
 `;
 const New = styled.h2`
     font-size: 20px;
     color: #000;
-    @media all and (max-width: 640px){
-        font-size: 16px;
+    @media all and (max-width: 480px){
+        font-size: 18px;
     }
 `;
 const Arrowimg = styled.div`
@@ -197,7 +194,7 @@ const One = styled.span`
     display: inline-block;
     color: gray;
     font-size: 30px;
-    @media all and (max-width: 3600px){
+    @media all and (max-width: 480px){
         font-size: 20px;
     }
 `;
@@ -212,6 +209,7 @@ const Card = styled.div`
     }
     @media all and (max-width: 640px){
         margin-bottom: 30px;
+        width: 85%;
     }
 `;
 const Item = styled.div`
@@ -223,12 +221,6 @@ const Image = styled.img`
 `;
 const Containeres = styled.div`
     padding: 30px 10px;
-    @media all and (max-width: 768px){
-        padding: 30px 5px;
-    }
-    @media all and (max-width: 640px){
-        padding: 30px 10px;
-    }
 `;
 const Text = styled.h3`
     font-size: 14px;
@@ -240,7 +232,7 @@ const Text = styled.h3`
     @media all and (max-width: 768px){
         font-size: 10px;
     }
-    @media all and (max-width: 640px){
+    @media all and (max-width: 480px){
         font-size: 14px;
     }
 `;
@@ -250,9 +242,9 @@ const Description = styled.p`
     color: #9e9696;
     font-weight: bolder;
     @media all and (max-width: 768px){
-        font-size: 10px;
+        font-size: 11px;
     }
-    @media all and (max-width: 640px){
+    @media all and (max-width: 480px){
         font-size: 12px;
     }
 `;
@@ -274,10 +266,13 @@ const Content= styled.div`
 const Name = styled.h3`
     font-size: 12px;
     @media all and (max-width: 980px){
-        font-size: 10px;
+        font-size: 11px;
+    }
+    @media all and (max-width: 768px){
+        font-size: 8px;
     }
     @media all and (max-width: 640px){
-        font-size: 12px;
+        font-size: 10px;
     }
 `;
 const Period = styled.p`
@@ -285,11 +280,14 @@ const Period = styled.p`
     color: #9e9696;
     font-weight: 600;
     @media all and (max-width: 980px){
-        font-size: 8px;
+        font-size: 10px;
         font-weight: 400;
     }
+    @media all and (max-width: 768px){
+        font-size: 8px;
+    }
     @media all and (max-width: 640px){
-        font-size: 12px;
+        font-size: 10px;
     }
     
 `;

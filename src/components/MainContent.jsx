@@ -42,10 +42,6 @@ const Lessons = styled.div`
     grid-template-rows: 1fr;
     grid-gap: 40px;
     margin-left: 20px;
-    @media all and (max-width: 980px){
-        grid-gap: 25px;
-    }
-   
 `;
 const SectionOne = styled.div`
     grid-column-start: 1;

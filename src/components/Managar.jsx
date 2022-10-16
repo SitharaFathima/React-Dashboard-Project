@@ -1,18 +1,30 @@
 import React from 'react';
 import { useState } from 'react';
-import {Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Managar() {
+    const [itemId, setItemId] = useState()
+    const Items = [
+        { id: 1, title: "pending" },
+        { id: 2, title: "completed" },
+        { id: 3, title: "submitted" },
+    ];
+
+    const setEachId = (id) => {
+        setItemId(id)
+    }
 
   return (
     <Manager>
         <Top>
             <Text>Assignment Manager</Text>
             <List>
-                <Item><Line>pending</Line></Item>
-                <Item><Line>completed</Line></Item>
-                <Item><Line>submitted</Line></Item>
+                {Items.map((item) => (
+                    <Item key={item.id} onClick={() => setEachId(item.id)}>
+                        <Line className={item.id === itemId && "setColor"}>{item.title}</Line>
+                    </Item>
+                ))}
             </List>
             <Card>
                 <Main>
@@ -67,19 +79,22 @@ const Item = styled.li`
 const Line = styled(NavLink)`
     color: #9E9696;
     font-size: 12px;
-   
+    &.setColor {
+        color: #000;
+        border-bottom: 2px solid #0B752D;
+    }
 `;
 const Card = styled.div`
     padding: 70px 40px 20px;
     box-shadow: -1px 3px 7px -1px #9e9696;
-    @media all and (max-width: 1280px){
-        padding: 70px 15px 20px;
+    @media all and (max-width: 1080px){
+        padding: 45px 15px 20px;
     }
     @media all and (max-width: 980px){
         padding: 30px 40px 20px;
     }
-    @media all and (max-width: 640px){
-        padding: 30px 20px 20px;
+    @media all and (max-width: 480px){
+        padding: 30px 15px 20px;
     }
 `;
 const Main = styled.div`
@@ -88,10 +103,8 @@ const Main = styled.div`
     margin-bottom: 25px;
 `;
 const Left = styled.div`
-
 `;
 const Right = styled.div`
-
 `;
 const Box = styled.div`
     display: flex;
@@ -106,16 +119,10 @@ const Basic = styled.h3`
     @media all and (max-width: 1080px){
         margin-right: 16px;
     }
-    @media all and (max-width: 980px){
-        margin-right: 60px;
-    }
-    @media all and (max-width: 760px){
-        margin-right: 30px;
-    }
 `;
 const Filler = styled.div`
     display:flex;
-    @media all and (max-width: 640px){
+    @media all and (max-width: 360px){
         display: none;
     }
 `;
@@ -128,11 +135,8 @@ const Blue = styled.div`
     @media all and (max-width: 1280px){
         width: 50px;
     }
-    @media all and (max-width: 980px){
-        width: 70px;
-    }
-    @media all and (max-width: 768px){
-        width: 50px;
+    @media all and (max-width: 480px){
+        width: 40px;
     }
 `;
 const Gray = styled.div`
@@ -144,12 +148,9 @@ const Gray = styled.div`
     @media all and (max-width: 1280px){
         width: 50px;
     }
-    @media all and (max-width: 980px){
-        width: 70px;
+    @media all and (max-width: 480px){
+        width: 40px;
     }
-    @media all and (max-width: 768px){
-        width: 50px;
-    } 
 `;
 const Final = styled.p`
      color: #9E9696;
@@ -164,9 +165,9 @@ const Yellow = styled.button`
     border-radius: 5px;
     border: 2px solid yellow;
     width: 100px;
-    @media all and (max-width: 640px){
+    @media all and (max-width: 480px){
         width: 70px;
-        padding: 8px 14px;
+        padding: 6px 14px;
     }
 `;
 const Violet = styled.button`
@@ -178,9 +179,9 @@ const Violet = styled.button`
     padding: 12px 20px;
     border: 2px solid #5CFB;
     width: 100px;
-    @media all and (max-width: 640px){
+    @media all and (max-width: 480px){
         width: 70px;
-        padding: 8px 14px;
+        padding: 6px 14px;
     }
 `;
 export default Managar
