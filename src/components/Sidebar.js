@@ -78,7 +78,7 @@ function Sidebar() {
                         <Image src={Rectangle} />
                     </ImageContainer>
                     <Bluecard>Buy Premium</Bluecard>
-                    <Whitecard>Learn more</Whitecard>
+                    <Whitecard>Learn more....</Whitecard>
                 </Premium>
             </Bottom>
         </Container>
