@@ -79,6 +79,10 @@ const Item = styled.li`
 const Line = styled(NavLink)`
     color: #9E9696;
     font-size: 12px;
+    &:hover{
+        color: #000;
+        border-bottom: 2px solid #0B752D;
+    }
     &.setColor {
         color: #000;
         border-bottom: 2px solid #0B752D;

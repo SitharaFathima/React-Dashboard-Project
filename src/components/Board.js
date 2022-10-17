@@ -172,13 +172,16 @@ return (
   ) 
 }
 const Container = styled.div`
-
+   
 `;
 
 const Topbox = styled.div`
     margin: 35px 30px 30px 0;
     display: flex;
     justify-content: space-between;
+    @media all and (max-width: 640px){
+      margin-top: 50px;
+    }
 `;
 const New = styled.h2`
     font-size: 20px;

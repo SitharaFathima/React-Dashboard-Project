@@ -47,11 +47,7 @@ const Bar = [
 
 function Sidebar() {
     const [title, setTitle] = useState("");
-
-    // const setEachTitle = (title) => {
-    //     setTitle(title);
-    // };
-    console.log("############################### title", title);
+     
     return (
         <Container>
             <Top>
