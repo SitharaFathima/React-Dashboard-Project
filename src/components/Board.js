@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
@@ -8,13 +8,16 @@ import { FaAngleRight } from 'react-icons/fa';
 
 
 function Board() {
-    
+
+
 const settings = {
     dots: true,
+    arrows: true,
     infinite: false,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 3,
+   
     responsive: [
       {
         breakpoint: 1024,

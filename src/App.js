@@ -8,10 +8,18 @@ import Rewards from "./components/screens/rewards/Rewards";
 import Sheduler from "./components/screens/sheduler/Sheduler";
 import Submission from "./components/screens/submission/Submission";
 import Technology from "./components/screens/technology/Technology";
+import { Helmet } from 'react-helmet';
+
+
 
 function App() {
     return (
         <div className="App">
+            <Helmet>
+                <title>Dashboard</title>
+                <meta name="description" content="App Description" />
+                <meta name="theme-color" content="#008f68" />
+            </Helmet>
             <Router>
                 <Routes>
                     <Route
