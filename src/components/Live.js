@@ -20,7 +20,7 @@ function Live() {
                             <Physics><Span>Physics</Span> Pro Lee Dan Qi</Physics>
                         </Paragraph>
                         <Bluebox>
-                            <Right><Arrow><Image src={require("../assets/images/component 116.svg").default} /></Arrow></Right>
+                            <Right><Arrow><Image src={require("../assets/images/Component 116.svg").default} /></Arrow></Right>
                             <Left><Text>join</Text></Left>
                         </Bluebox>      
                     </Momentum>

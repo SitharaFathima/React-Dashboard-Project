@@ -1,45 +1,45 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Logocomp from "../assets/images/logo-comp.png";
-import Rectangle from "../assets/images/rectangle 20.jpg";
+import Rectangle from "../assets/images/Rectangle 20.jpg";
 import { NavLink } from "react-router-dom";
 
 const Bar = [
     {
         title: "Home",
-        grayIcon: require("../assets/images/component 114.svg").default,
+        grayIcon: require("../assets/images/Component 114.svg").default,
         BlackIcon: require("../assets/images/home.svg").default,
         link: "/home",
     },
     {
         title: "Sheduler",
-        grayIcon: require("../assets/images/food-site.svg").default,
+        grayIcon: require("../assets/images/Food-Site.svg").default,
         BlackIcon: require("../assets/images/sheduler.svg").default,
 
         link: "/sheduler",
     },
     {
         title: "Technology",
-        grayIcon: require("../assets/images/component 115.svg").default,
+        grayIcon: require("../assets/images/Component 115.svg").default,
         BlackIcon: require("../assets/images/technology.svg").default,
 
         link: "/technology",
     },
     {
         title: "Rewards",
-        grayIcon: require("../assets/images/component 114.svg").default,
+        grayIcon: require("../assets/images/Component 114.svg").default,
         BlackIcon: require("../assets/images/rewards.svg").default,
         link: "/rewards",
     },
     {
         title: "Notes",
-        grayIcon: require("../assets/images/component 115.svg").default,
+        grayIcon: require("../assets/images/Component 115.svg").default,
         BlackIcon: require("../assets/images/notes.svg").default,
         link: "/notes",
     },
     {
         title: "Submission",
-        grayIcon: require("../assets/images/component 118.svg").default,
+        grayIcon: require("../assets/images/Component 118.svg").default,
         BlackIcon: require("../assets/images/submisssion.svg").default,
         link: "/submission",
     },
