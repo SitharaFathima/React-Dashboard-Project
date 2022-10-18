@@ -11,7 +11,7 @@ function SampleNextArrow(props) {
     return (
         <One className={className}
         onClick={onClick}>
-            <FaAngleLeft />
+            <FaAngleRight />
         </One>   
     );
 }
@@ -21,7 +21,7 @@ function SamplePrevArrow(props) {
     return (
         <Two className={className}
         onClick={onClick}>
-        <FaAngleRight />
+            <FaAngleLeft />
         </Two>
      
     );
@@ -206,9 +206,12 @@ const Topbox = styled.div`
 `;
 const New = styled.h2`
     font-size: 20px;
-    color: #9e9696;
+    color: #000;
     @media all and (max-width: 480px){
         font-size: 18px;
+    }
+    @media (max-width: 480px){
+        font-size: 14px;
     }
 `;
 const Arrowimg = styled.div`
@@ -227,27 +230,34 @@ const One = styled.button`
     @media all and (max-width: 360px){
         right: 51px;
     }
+    @media all and (max-width: 1280px){
+        right: 38px;
+    } 
+    @media all and (max-width: 480px){
+        right: 55px;
+    } 
+    
 `;
 const Two = styled.button`
     position: absolute;
     top: -57px;
-    left: 1041px;
+    left: 995px;
     display: inline-block;
     color: #9e9696;
     font-size: 30px;
     @media all and (max-width: 1380px){
-        left: 850px;
+        left: 803px;
     }
     @media all and (max-width: 1280px){
         left: 710px;
     }
     @media all and (max-width: 1080px){
-        left: 650px;
+        left: 655px;
     }
-    @media all and (max-width: 980px){
+   @media all and (max-width: 980px){
         left: 450px;
     }
-    @media all and (max-width: 768px){
+   @media all and (max-width: 768px){
         left: 350px;
     }
     @media all and (max-width: 640px){
@@ -256,10 +266,11 @@ const Two = styled.button`
     @media all and (max-width: 480px){
         left: 220px;
         font-size: 20px;
-    }
-       
+    } 
+    @media all and (max-width: 360px){
+        left: 179px;
+    } 
 `;
-
 const Cards = styled.div`
 
 `;
@@ -276,9 +287,7 @@ const Card = styled.div`
     @media all and (max-width: 480px){
         left: 220px;
         font-size: 20px;
-    }
-   
-       
+    }   
 `;
 const Item = styled.div`
     width: 100%; 
@@ -357,6 +366,5 @@ const Period = styled.p`
     @media all and (max-width: 640px){
         font-size: 10px;
     }
-    
 `;
 
