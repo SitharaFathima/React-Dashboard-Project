@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Woman from "../assets/images/woman (4) 1.png";
 import { AiOutlineBell, AiOutlineSetting } from 'react-icons/ai';
 import Navbar from './Navbar';
 
+
 function Header() {
+
 
   return (
     <Head>

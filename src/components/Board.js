@@ -6,11 +6,31 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaAngleLeft } from 'react-icons/fa';
 import { FaAngleRight } from 'react-icons/fa';
 
-
+function SampleNextArrow(props) {
+    const { className, onClick } = props;
+    return (
+        <One className={className}
+        onClick={onClick}>
+            <FaAngleLeft />
+        </One>   
+    );
+}
+ 
+function SamplePrevArrow(props) {
+    const { className, onClick } = props;
+    return (
+        <Two className={className}
+        onClick={onClick}>
+        <FaAngleRight />
+        </Two>
+     
+    );
+  }
 function Board() {
 
-
 const settings = {
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     dots: true,
     arrows: true,
     infinite: false,
@@ -138,12 +158,8 @@ return (
         <Topbox>
             <New>New Lessons Board</New>
             <Arrowimg>
-                <One>
-                    <FaAngleLeft />
-                </One>
-                <One>
-                    <FaAngleRight />
-                </One>
+              
+               
             </Arrowimg>
         </Topbox>
 
@@ -173,6 +189,9 @@ return (
 </Container>
   ) 
 }
+
+export default Board;
+
 const Container = styled.div`
    
 `;
@@ -187,22 +206,60 @@ const Topbox = styled.div`
 `;
 const New = styled.h2`
     font-size: 20px;
-    color: #000;
+    color: #9e9696;
     @media all and (max-width: 480px){
         font-size: 18px;
     }
 `;
 const Arrowimg = styled.div`
-
+    position : relative;
 `;
-const One = styled.span`
+const One = styled.button`
+    position: absolute;
     display: inline-block;
-    color: gray;
+    color: #9e9696;
     font-size: 30px;
+    top: -57px;
+    right: 87px;
     @media all and (max-width: 480px){
         font-size: 20px;
     }
+    @media all and (max-width: 360px){
+        right: 51px;
+    }
 `;
+const Two = styled.button`
+    position: absolute;
+    top: -57px;
+    left: 1041px;
+    display: inline-block;
+    color: #9e9696;
+    font-size: 30px;
+    @media all and (max-width: 1380px){
+        left: 850px;
+    }
+    @media all and (max-width: 1280px){
+        left: 710px;
+    }
+    @media all and (max-width: 1080px){
+        left: 650px;
+    }
+    @media all and (max-width: 980px){
+        left: 450px;
+    }
+    @media all and (max-width: 768px){
+        left: 350px;
+    }
+    @media all and (max-width: 640px){
+        left: 350px;
+    }
+    @media all and (max-width: 480px){
+        left: 220px;
+        font-size: 20px;
+    }
+       
+`;
+
 const Cards = styled.div`
 
 `;
@@ -216,6 +273,12 @@ const Card = styled.div`
         margin-bottom: 30px;
         width: 85%;
     }
+    @media all and (max-width: 480px){
+        left: 220px;
+        font-size: 20px;
+    }
+   
+       
 `;
 const Item = styled.div`
     width: 100%; 
@@ -297,4 +360,3 @@ const Period = styled.p`
     
 `;
 
-export default Board
