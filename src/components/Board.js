@@ -9,7 +9,7 @@ import { FaAngleRight } from 'react-icons/fa';
 function SampleNextArrow(props) {
     const { className, onClick } = props;
     return (
-        <One className={className}
+        <One
         onClick={onClick}>
             <FaAngleRight />
         </One>   
@@ -19,7 +19,7 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
     const { className, onClick } = props;
     return (
-        <Two className={className}
+        <Two 
         onClick={onClick}>
             <FaAngleLeft />
         </Two>
@@ -158,8 +158,6 @@ return (
         <Topbox>
             <New>New Lessons Board</New>
             <Arrowimg>
-              
-               
             </Arrowimg>
         </Topbox>
 
@@ -193,9 +191,7 @@ return (
 export default Board;
 
 const Container = styled.div`
-   
 `;
-
 const Topbox = styled.div`
     margin: 35px 30px 30px 0;
     display: flex;
@@ -223,7 +219,7 @@ const One = styled.button`
     color: #9e9696;
     font-size: 30px;
     top: -57px;
-    right: 87px;
+    right: 77px;
     @media all and (max-width: 480px){
         font-size: 20px;
     }
@@ -249,19 +245,19 @@ const Two = styled.button`
         left: 803px;
     }
     @media all and (max-width: 1280px){
-        left: 710px;
+        left: 700px;
     }
     @media all and (max-width: 1080px){
-        left: 655px;
+        left: 645px;
     }
    @media all and (max-width: 980px){
-        left: 450px;
+        left: 443px;
     }
    @media all and (max-width: 768px){
-        left: 350px;
+        left: 347px;
     }
     @media all and (max-width: 640px){
-        left: 350px;
+        left: 345px;
     }
     @media all and (max-width: 480px){
         left: 220px;
@@ -269,7 +265,7 @@ const Two = styled.button`
     } 
     @media all and (max-width: 360px){
         left: 179px;
-    } 
+    }  
 `;
 const Cards = styled.div`
 
